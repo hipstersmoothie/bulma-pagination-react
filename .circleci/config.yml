@@ -1,0 +1,95 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/bulma-pagination-react
+  docker:
+    - image: circleci/node:latest-browsers
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            # Find a cache corresponding to this specific package.json checksum
+            # when this file is changed, this key will fail
+            - bulma-pagination-react-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+            - bulma-pagination-react-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - bulma-pagination-react-{{ .Branch }}
+            # Find the most recent cache used from any branch
+            - bulma-pagination-react-master
+            - bulma-pagination-react-
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          key: bulma-pagination-react-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+          paths:
+            - node_modules
+            - ~/.cache/yarn
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/bulma-pagination-react
+      - run:
+          name: Lint
+          command: yarn lint
+
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/bulma-pagination-react
+      - run:
+          name: Test
+          command: yarn test
+
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/bulma-pagination-react
+      - run:
+          name: Build
+          command: yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - install:
+          filters:
+            tags:
+              only: /.*/
+
+      - lint:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+
+      - test:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+
+      - build:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
