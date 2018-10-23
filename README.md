@@ -1,6 +1,6 @@
 # bulma-pagination-react
 
-[Bulma pagination](https://bulma.io/) as a [react](https://reactjs.org/) component.
+[Bulma pagination](https://bulma.io/documentation/components/pagination/) as a [react](https://reactjs.org/) component.
 
 ## Installation
 
