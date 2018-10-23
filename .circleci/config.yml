@@ -110,3 +110,13 @@ workflows:
           filters:
             tags:
               only: /.*/
+
+      - release:
+          requires:
+            - test
+            - lint
+            - build
+          filters:
+            branches:
+              only:
+                - master
