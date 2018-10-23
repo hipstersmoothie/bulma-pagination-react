@@ -2,6 +2,7 @@ import React from 'react';
 
 import renderer from 'react-test-renderer';
 
+// eslint-disable-next-line unicorn/import-index
 import Pagination, { Page, getVisiblePages } from '../index';
 
 const render = element => renderer.create(element).toJSON();
@@ -26,8 +27,8 @@ describe('Page', () => {
           <Page
             currentPage={1}
             index={1}
-            onChange={() => {}}
             className="foo-bar"
+            onChange={() => {}}
           />
         )
         .root.findByProps({ className: 'foo-bar' })

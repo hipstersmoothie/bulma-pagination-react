@@ -8,8 +8,8 @@ export const Page = ({ currentPage, index, onChange, className }) => (
         (index === 1 && !currentPage)) &&
         'is-current'}`}
       aria-label={`Goto page ${index}`}
-      onClick={() => onChange(index)}
       aria-current={index === currentPage && 'page'}
+      onClick={() => onChange(index)}
     >
       {index}
     </a>
@@ -19,7 +19,12 @@ export const Page = ({ currentPage, index, onChange, className }) => (
 Page.propTypes = {
   currentPage: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
+  className: PropTypes.string,
   onChange: PropTypes.func.isRequired
+};
+
+Page.defaultProps = {
+  className: ''
 };
 
 const Ellipses = () => (
@@ -153,7 +158,11 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   currentPage: 1,
   visibleRadius: 1,
-  className: ''
+  className: '',
+  prevClassName: '',
+  nextClassName: '',
+  linkClassName: '',
+  listClassName: ''
 };
 
 export default Pagination;
