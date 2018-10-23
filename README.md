@@ -1,4 +1,8 @@
-# bulma-pagination-react
+<div align="center">
+  <img height="200"
+    src="https://raw.githubusercontent.com/jgthms/bulma/master/docs/images/bulma-banner.png">
+  <h1>bulma-pagination-react</h1>
+</div
 
 [Bulma pagination](https://bulma.io/documentation/components/pagination/) as a [react](https://reactjs.org/) component.
 
