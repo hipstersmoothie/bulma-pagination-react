@@ -1,0 +1,109 @@
+{
+  "name": "bulma-pagination-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "source": "index.js",
+  "author": {
+    "name": "Andrew Lisowski",
+    "email": "lisowski54@gmail.com"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "xo",
+    "build": "babel index.js -d dist/ --ignore '**/*.test.js'",
+    "build:watch": "npm run build -- --watch"
+  },
+  "peerDependencies": {
+    "react": ">16"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-xo-react": "^0.17.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "react": "^16.5.2",
+    "react-test-renderer": "^16.5.2",
+    "xo": "^0.23.0"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/dist/**",
+      "!**/coverage/**"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "xo": {
+    "env": [
+      "dom",
+      "jest"
+    ],
+    "extends": [
+      "prettier",
+      "xo-react/space"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "react/jsx-tag-spacing": 0,
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "^react$"
+          ]
+        }
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
+}

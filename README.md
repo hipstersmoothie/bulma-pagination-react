@@ -1,0 +1,1 @@
+# bulma-pagination-react

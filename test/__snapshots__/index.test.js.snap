@@ -1,0 +1,491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page should be different for matching current 1`] = `
+<li>
+  <a
+    aria-current="page"
+    aria-label="Goto page 1"
+    className="pagination-link undefined is-current"
+    onClick={[Function]}
+  >
+    1
+  </a>
+</li>
+`;
+
+exports[`Page should display a numbered element 1`] = `
+<li>
+  <a
+    aria-current={false}
+    aria-label="Goto page 19"
+    className="pagination-link undefined false"
+    onClick={[Function]}
+  >
+    19
+  </a>
+</li>
+`;
+
+exports[`Pagination should render pages at end 1`] = `
+<nav
+  aria-label="pagination"
+  className="pagination-container pagination "
+  role="navigation"
+>
+  <a
+    className="pagination-previous nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Previous
+  </a>
+  <a
+    className="pagination-next nav undefined"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Next page
+  </a>
+  <ul
+    className="pagination-list undefined"
+  >
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 1"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <span
+        className="pagination-ellipsis"
+      >
+        …
+      </span>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 8"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        8
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 9"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        9
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current="page"
+        aria-label="Goto page 10"
+        className="pagination-link undefined is-current"
+        onClick={[Function]}
+      >
+        10
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination should render pages at start 1`] = `
+<nav
+  aria-label="pagination"
+  className="pagination-container pagination "
+  role="navigation"
+>
+  <a
+    className="pagination-previous nav undefined"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Previous
+  </a>
+  <a
+    className="pagination-next nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next page
+  </a>
+  <ul
+    className="pagination-list undefined"
+  >
+    <li>
+      <a
+        aria-current="page"
+        aria-label="Goto page 1"
+        className="pagination-link undefined is-current"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 2"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        2
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 3"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        3
+      </a>
+    </li>
+    <li>
+      <span
+        className="pagination-ellipsis"
+      >
+        …
+      </span>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 10"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        10
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination should render pages in middle 1`] = `
+<nav
+  aria-label="pagination"
+  className="pagination-container pagination "
+  role="navigation"
+>
+  <a
+    className="pagination-previous nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Previous
+  </a>
+  <a
+    className="pagination-next nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next page
+  </a>
+  <ul
+    className="pagination-list undefined"
+  >
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 1"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <span
+        className="pagination-ellipsis"
+      >
+        …
+      </span>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 4"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        4
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current="page"
+        aria-label="Goto page 5"
+        className="pagination-link undefined is-current"
+        onClick={[Function]}
+      >
+        5
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 6"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        6
+      </a>
+    </li>
+    <li>
+      <span
+        className="pagination-ellipsis"
+      >
+        …
+      </span>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 10"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        10
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination should render with no ellipses if not needed - end 1`] = `
+<nav
+  aria-label="pagination"
+  className="pagination-container pagination "
+  role="navigation"
+>
+  <a
+    className="pagination-previous nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Previous
+  </a>
+  <a
+    className="pagination-next nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next page
+  </a>
+  <ul
+    className="pagination-list undefined"
+  >
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 1"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <span
+        className="pagination-ellipsis"
+      >
+        …
+      </span>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 7"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        7
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current="page"
+        aria-label="Goto page 8"
+        className="pagination-link undefined is-current"
+        onClick={[Function]}
+      >
+        8
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 9"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        9
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 10"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        10
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination should render with no ellipses if not needed - start 1`] = `
+<nav
+  aria-label="pagination"
+  className="pagination-container pagination "
+  role="navigation"
+>
+  <a
+    className="pagination-previous nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Previous
+  </a>
+  <a
+    className="pagination-next nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next page
+  </a>
+  <ul
+    className="pagination-list undefined"
+  >
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 1"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 2"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        2
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current="page"
+        aria-label="Goto page 3"
+        className="pagination-link undefined is-current"
+        onClick={[Function]}
+      >
+        3
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 4"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        4
+      </a>
+    </li>
+    <li>
+      <span
+        className="pagination-ellipsis"
+      >
+        …
+      </span>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 10"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        10
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination should render with no ellipses if not needed - visible == max 1`] = `
+<nav
+  aria-label="pagination"
+  className="pagination-container pagination "
+  role="navigation"
+>
+  <a
+    className="pagination-previous nav undefined"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Previous
+  </a>
+  <a
+    className="pagination-next nav undefined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next page
+  </a>
+  <ul
+    className="pagination-list undefined"
+  >
+    <li>
+      <a
+        aria-current="page"
+        aria-label="Goto page 1"
+        className="pagination-link undefined is-current"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 2"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        2
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={false}
+        aria-label="Goto page 3"
+        className="pagination-link undefined false"
+        onClick={[Function]}
+      >
+        3
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
