@@ -4,6 +4,8 @@
   <h1>bulma-pagination-react</h1>
 </div
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier) [![CircleCI](https://img.shields.io/circleci/project/github/hipstersmoothie/bulma-pagination-react/master.svg?style=for-the-badge)](https://circleci.com/gh/hipstersmoothie/bulma-pagination-react) [![npm](https://img.shields.io/npm/v/bulma-pagination-react.svg?style=for-the-badge)](https://www.npmjs.com/package/bulma-pagination-react) [![npm](https://img.shields.io/npm/dt/bulma-pagination-react.svg?style=for-the-badge)](https://www.npmjs.com/package/bulma-pagination-react)
+
 [Bulma pagination](https://bulma.io/documentation/components/pagination/) as a [react](https://reactjs.org/) component.
 
 ## Installation

@@ -1,7 +1,7 @@
 {
   "name": "bulma-pagination-react",
   "version": "0.0.1",
-  "description": "",
+  "description": "Bulma pagination as a react component.",
   "main": "dist/index.js",
   "source": "index.js",
   "author": {
