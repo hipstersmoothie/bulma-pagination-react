@@ -14,6 +14,10 @@
     "build": "babel index.js -d dist/ --ignore '**/*.test.js'",
     "build:watch": "npm run build -- --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hipstersmoothie/bulma-pagination-react"
+  },
   "peerDependencies": {
     "react": ">16"
   },
