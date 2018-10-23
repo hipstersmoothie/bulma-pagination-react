@@ -12,7 +12,9 @@
     "test": "jest",
     "lint": "xo",
     "build": "babel index.js -d dist/ --ignore '**/*.test.js'",
-    "build:watch": "npm run build -- --watch"
+    "build:watch": "npm run build -- --watch",
+    "prerelease": "npm run build",
+    "release": "github-semantic-version --bump --changelog --push --publish"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,7 @@
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-xo-react": "^0.17.0",
     "eslint-plugin-react": "^7.11.1",
+    "github-semantic-version": "^7.6.0",
     "husky": "^1.1.2",
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
@@ -109,5 +112,11 @@
     "plugins": [
       "add-module-exports"
     ]
+  },
+  "gsv": {
+    "majorLabel": "Version: Major",
+    "minorLabel": "Version: Minor",
+    "patchLabel": "Version: Patch",
+    "internalLabel": "No version: Internal"
   }
 }
