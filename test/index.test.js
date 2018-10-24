@@ -113,6 +113,24 @@ describe('Pagination', () => {
     ).toMatchSnapshot();
   });
 
+  test('should use boolean flags as classnames', () => {
+    expect(
+      render(
+        <Pagination
+          isRounded
+          isCentered
+          isLarge
+          isMedium
+          isRight
+          isSmall
+          pages={10}
+          currentPage={3}
+          onChange={() => {}}
+        />
+      )
+    ).toMatchSnapshot();
+  });
+
   test('should call callback when previous clicked', () => {
     const onChange = jest.fn();
     const tree = renderer.create(
