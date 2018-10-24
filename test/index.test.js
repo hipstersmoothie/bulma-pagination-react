@@ -70,6 +70,12 @@ describe('Pagination', () => {
     ).toMatchSnapshot();
   });
 
+  test('should render pages at start with many', () => {
+    expect(
+      render(<Pagination pages={10} currentPage={4} visibleRadius={2} />)
+    ).toMatchSnapshot();
+  });
+
   test('should render pages in middle', () => {
     expect(
       render(<Pagination pages={10} currentPage={5} onChange={() => {}} />)

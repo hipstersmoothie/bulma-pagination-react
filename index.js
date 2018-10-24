@@ -75,7 +75,7 @@ const Pagination = ({
   const visiblePages = getVisiblePages(visibleRadius, currentPage, pages);
   const pagesComponents = [];
 
-  if (visiblePages[0] > visibleRadius) {
+  if (visiblePages[0] >= 2) {
     pagesComponents.push(
       <Page
         key="page-1"
@@ -85,7 +85,7 @@ const Pagination = ({
       />
     );
 
-    if (visiblePages[0] > visibleRadius + 1) {
+    if (visiblePages[0] !== 2) {
       pagesComponents.push(<Ellipses key="ellipses-1" />);
     }
   }
@@ -100,7 +100,6 @@ const Pagination = ({
       />
     )
   );
-
   if (currentPage <= pages - visibleRadius - 1 && visiblePages.length < pages) {
     if (currentPage < pages - visibleRadius - 1) {
       pagesComponents.push(<Ellipses key="ellipses-2" />);
