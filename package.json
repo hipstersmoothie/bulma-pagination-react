@@ -8,6 +8,9 @@
     "name": "Andrew Lisowski",
     "email": "lisowski54@gmail.com"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "xo",
