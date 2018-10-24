@@ -29,7 +29,7 @@ exports[`Page should display a numbered element 1`] = `
 exports[`Pagination should render pages at end 1`] = `
 <nav
   aria-label="pagination"
-  className="pagination-container pagination "
+  className="pagination-container pagination  "
   role="navigation"
 >
   <a
@@ -103,7 +103,7 @@ exports[`Pagination should render pages at end 1`] = `
 exports[`Pagination should render pages at start 1`] = `
 <nav
   aria-label="pagination"
-  className="pagination-container pagination "
+  className="pagination-container pagination  "
   role="navigation"
 >
   <a
@@ -177,7 +177,7 @@ exports[`Pagination should render pages at start 1`] = `
 exports[`Pagination should render pages at start with many 1`] = `
 <nav
   aria-label="pagination"
-  className="pagination-container pagination "
+  className="pagination-container pagination  "
   role="navigation"
 >
   <a
@@ -281,7 +281,7 @@ exports[`Pagination should render pages at start with many 1`] = `
 exports[`Pagination should render pages in middle 1`] = `
 <nav
   aria-label="pagination"
-  className="pagination-container pagination "
+  className="pagination-container pagination  "
   role="navigation"
 >
   <a
@@ -372,7 +372,7 @@ exports[`Pagination should render pages in middle 1`] = `
 exports[`Pagination should render with no ellipses if not needed - end 1`] = `
 <nav
   aria-label="pagination"
-  className="pagination-container pagination "
+  className="pagination-container pagination  "
   role="navigation"
 >
   <a
@@ -456,7 +456,7 @@ exports[`Pagination should render with no ellipses if not needed - end 1`] = `
 exports[`Pagination should render with no ellipses if not needed - start 1`] = `
 <nav
   aria-label="pagination"
-  className="pagination-container pagination "
+  className="pagination-container pagination  "
   role="navigation"
 >
   <a
@@ -540,7 +540,7 @@ exports[`Pagination should render with no ellipses if not needed - start 1`] = `
 exports[`Pagination should render with no ellipses if not needed - visible == max 1`] = `
 <nav
   aria-label="pagination"
-  className="pagination-container pagination "
+  className="pagination-container pagination  "
   role="navigation"
 >
   <a

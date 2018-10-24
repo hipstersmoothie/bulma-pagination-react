@@ -72,17 +72,17 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/bulma-pagination-react
-
       - run:
           name: 'Make sure we can commit to github'
           command: |
             mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/bulma-pagination-react/.npmrc
-
       - run:
           name: Release
           command: npm run release
+      - run:
+          name: Publish Storybook
+          command: npm run deploy-storybook
 
 workflows:
   version: 2

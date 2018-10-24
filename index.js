@@ -66,6 +66,12 @@ const Pagination = ({
   currentPage,
   visibleRadius,
   className,
+  isRounded,
+  isSmall,
+  isMedium,
+  isLarge,
+  isCentered,
+  isRight,
   prevClassName,
   nextClassName,
   linkClassName,
@@ -74,6 +80,15 @@ const Pagination = ({
 }) => {
   const visiblePages = getVisiblePages(visibleRadius, currentPage, pages);
   const pagesComponents = [];
+
+  const classes = [
+    isRounded && 'is-rounded',
+    isSmall && 'is-small',
+    isMedium && 'is-medium',
+    isLarge && 'is-large',
+    isCentered && 'is-centered',
+    isRight && 'is-right'
+  ].filter(Boolean);
 
   if (visiblePages[0] >= 2) {
     pagesComponents.push(
@@ -118,7 +133,9 @@ const Pagination = ({
 
   return (
     <nav
-      className={`pagination-container pagination ${className}`}
+      className={`pagination-container pagination ${classes.join(
+        ' '
+      )} ${className}`}
       role="navigation"
       aria-label="pagination"
     >
@@ -151,7 +168,13 @@ Pagination.propTypes = {
   nextClassName: PropTypes.string,
   linkClassName: PropTypes.string,
   listClassName: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  isRounded: PropTypes.bool,
+  isSmall: PropTypes.bool,
+  isMedium: PropTypes.bool,
+  isLarge: PropTypes.bool,
+  isCentered: PropTypes.bool,
+  isRight: PropTypes.bool
 };
 
 Pagination.defaultProps = {
@@ -161,7 +184,13 @@ Pagination.defaultProps = {
   prevClassName: '',
   nextClassName: '',
   linkClassName: '',
-  listClassName: ''
+  listClassName: '',
+  isRounded: false,
+  isSmall: false,
+  isMedium: false,
+  isLarge: false,
+  isCentered: false,
+  isRight: false
 };
 
 export default Pagination;
