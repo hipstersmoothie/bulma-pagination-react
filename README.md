@@ -8,6 +8,8 @@
 
 [Bulma pagination](https://bulma.io/documentation/components/pagination/) as a [react](https://reactjs.org/) component.
 
+Make sure to include the `bulma` css in the head of your document!
+
 ## Installation
 
 ```sh
